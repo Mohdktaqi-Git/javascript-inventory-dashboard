@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Inventory & Analytics Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px; background: #eef2f6; color: #172738; font-family: system-ui, sans-serif; }
+    main { width: min(720px, 100%); padding: clamp(24px, 5vw, 48px); background: white; border: 1px solid #dbe3eb; border-radius: 20px; box-shadow: 0 16px 50px #1727380d; }
+    .eyebrow { color: #19705b; font-size: 12px; letter-spacing: 2px; font-weight: 700; }
+    h1 { font-size: clamp(28px, 5vw, 40px); line-height: 1.15; margin: 16px 0; }
+    p { color: #536477; line-height: 1.7; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0; }
+    button { padding: 12px 18px; border-radius: 9px; border: 1px solid #cbd6df; background: #f5f8fa; color: #172738; font: inherit; cursor: pointer; }
+    button:first-child { background: #19705b; color: white; border-color: #19705b; }
+    button:hover { filter: brightness(.95); }
+    button:focus-visible { outline: 3px solid #71bdaa; outline-offset: 3px; }
+    pre { background: #142534; color: #def2ed; border-radius: 12px; padding: 20px; white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.65; font-size: 13px; }
+    .note { font-size: 13px; }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <div class="eyebrow">JAVASCRIPT CAPSTONE · MINI PROJECT</div>
+    <h1>Product Inventory & Analytics Dashboard</h1>
+    <p>Add a product using browser prompts, then explore your inventory in the developer console. A copy of the latest report appears below.</p>
+    <div class="actions">
+      <button id="add-product" type="button">Add product & run report</button>
+      <button id="show-report" type="button">Show report</button>
+      <button id="search-product" type="button">Search product</button>
+      <button id="adjust-prices" type="button">Tax & discount</button>
+    </div>
+    <pre id="output" role="status" aria-live="polite">Ready. Select “Add product & run report” to start.</pre>
+    <p class="note">Open developer tools → Console to view the program output. Prices use USD. Products stay in memory for this session; reloading restores the sample inventory.</p>
+  </main>
+</body>
+</html>
